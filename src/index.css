@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* slow floating glow */
+@keyframes slowFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+}
+
+.animate-slowFloat {
+  animation: slowFloat 8s ease-in-out infinite;
+}
+
+/* moving gradient */
+@keyframes gradientMove {
+  0% { transform: translateX(-10%); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(-10%); }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 12s ease-in-out infinite;
+}
+
+/* scroll reveal animation */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.active {
+  animation: revealUp 0.9s ease forwards;
+}

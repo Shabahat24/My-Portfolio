@@ -1,0 +1,82 @@
+// const projects = [
+//   "VidPress – Video Streaming Platform",
+//   "Pariksha – Quiz Management System",
+//   "Institute Portal – Educational Platform",
+//   "Weather App – React + API",
+//   "Expense Tracker – React + Tailwind",
+// ];
+
+// export default function Projects() {
+//   return (
+//     <section
+//       id="projects"
+//       className="reveal py-20 px-6 text-center"
+//     >
+//       <h2 className="text-4xl font-bold mb-12 text-red-500 select-none">Projects</h2>
+
+//       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+//         {projects.map((project) => (
+//           <div
+//              key={project}
+//              className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl 
+//                hover:scale-105 hover:border-pink-500/40 transition transform shadow-lg"
+//                  >
+//                   {project}
+//                     </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
+
+import { useEffect, useState } from "react";
+
+export default function Projects() {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/Shabahat24/repos")
+
+      .then((res) => res.json())
+      .then((data) => {
+        const sorted = data
+          .filter((repo) => !repo.fork) // remove forked repos
+          .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)) // latest first
+          .slice(0, 6); // show only 6 projects
+
+        setRepos(sorted);
+      })
+      .catch((err) => console.error("GitHub fetch error:", err));
+  }, []);
+
+  return (
+    <section id="projects" className="reveal py-20 px-6 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center mb-12 text-red-500 select-none">
+        Projects
+      </h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {repos.map((repo) => (
+          <a
+            key={repo.id}
+            href={repo.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:scale-105 hover:border-red-500 transition duration-300"
+          >
+            <h3 className="text-xl font-semibold mb-2">{repo.name}</h3>
+
+            <p className="text-gray-400 text-sm mb-4">
+              {repo.description || "No description available."}
+            </p>
+
+            <div className="text-xs text-gray-500">
+              ⭐ {repo.stargazers_count} • 🍴 {repo.forks_count}
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
