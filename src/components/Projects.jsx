@@ -63,9 +63,8 @@ export default function Projects() {
             href={repo.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:scale-105 hover:border-red-500 transition duration-300"
-          >
-            <h3 className="text-xl font-semibold mb-2">{repo.name}</h3>
+           className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:scale-105 hover:border-pink-500/40 transition duration-300 shadow-lg">
+           <h3 className="text-xl font-semibold mb-2 group-hover:text-pink-400 transition">{repo.name}</h3>
 
             <p className="text-gray-400 text-sm mb-4">
               {repo.description || "No description available."}

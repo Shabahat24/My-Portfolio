@@ -112,13 +112,12 @@ function App() {
 
   return (
     <div className="relative text-gray-100 min-h-screen font-sans overflow-x-hidden">
+<img
+  src={`${import.meta.env.BASE_URL}bg.png`}
+  alt="background"
+  className="fixed inset-0 w-full h-full object-cover -z-20 scale-105 animate-[slowZoom_20s_ease-in-out_infinite]"
+/>
 
-      {/* Background image */}
-      <img
-        src="/bg.png"
-        alt="background"
-        className="fixed inset-0 w-full h-full object-cover -z-20 scale-105 animate-[slowZoom_20s_ease-in-out_infinite]"
-      />
 
       {/* Dark overlay */}
       <div className="fixed inset-0 bg-black/40 -z-10" />
@@ -133,7 +132,7 @@ function App() {
       </header>
 
       {/* Main content */}
-      <main className="max-w-7xl mx-auto px-6">
+      <main className="max-w-7xl mx-auto px-6 space-y-32">
         <Hero />
         <About />
         <Skills />
