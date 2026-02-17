@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "homepage": "https://Shabahat24.github.io/My-Portfolio",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.34.0",
