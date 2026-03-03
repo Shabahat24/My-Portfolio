@@ -8,12 +8,10 @@ export default function About() {
       <h2 className="text-4xl font-bold mb-6 text-red-500 select-none">About Me</h2>
 
       <p className="text-gray-400 leading-relaxed max-w-3xl mx-auto">
-        I am a passionate Frontend Developer with experience building
-        scalable, user-centric web applications using React.js,
-        JavaScript, and modern UI frameworks. I have worked on
-        real-time video streaming systems, quiz platforms, and
-        educational portals, focusing on performance,
-        responsiveness, and clean architecture.
+        MERN Stack Developer with 3+ years of experience building scalable, high-performance web applications using React.js and
+        modern JavaScript (ES6+). Strong expertise in frontend architecture, REST API integration, authentication systems (JWT,
+        OAuth 2.0), and performance optimization. Working knowledge of Node.js, Express.js, and MongoDB. Experienced in Agile
+        development and cross-functional collaboration.
       </p>
     </section>
   );

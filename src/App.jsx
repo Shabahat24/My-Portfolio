@@ -126,7 +126,7 @@ function App() {
       <header className="sticky top-0 backdrop-blur-md bg-black/40 border-b border-white/10 z-50">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-extrabold bg-gradient-to-r from-pink-500 via-red-500 to-orange-400 bg-clip-text text-transparent tracking-wide cursor-pointer">
-            Shabahat Riyaz
+            MERN Stack Developer
           </h1>
         </nav>
       </header>

@@ -35,17 +35,26 @@ import { useEffect, useState } from "react";
 export default function Projects() {
   const [repos, setRepos] = useState([]);
 
+  const featuredProjects = [
+    "My-Portfolio",
+    "PromptAlchemy",
+    "Pariksha",
+    "Tic-Tac-Toe",
+    "Weather-App",
+    "Expense-Tracker"
+  ];
+
   useEffect(() => {
     fetch("https://api.github.com/users/Shabahat24/repos")
-
       .then((res) => res.json())
       .then((data) => {
-        const sorted = data
-          .filter((repo) => !repo.fork) // remove forked repos
-          .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)) // latest first
-          .slice(0, 6); // show only 6 projects
+        const filtered = data.filter(
+          (repo) =>
+            !repo.fork &&
+            featuredProjects.includes(repo.name)
+        );
 
-        setRepos(sorted);
+        setRepos(filtered);
       })
       .catch((err) => console.error("GitHub fetch error:", err));
   }, []);
@@ -63,8 +72,11 @@ export default function Projects() {
             href={repo.html_url}
             target="_blank"
             rel="noopener noreferrer"
-           className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:scale-105 hover:border-pink-500/40 transition duration-300 shadow-lg">
-           <h3 className="text-xl font-semibold mb-2 group-hover:text-pink-400 transition">{repo.name}</h3>
+            className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:scale-105 hover:border-pink-500/40 transition duration-300 shadow-lg"
+          >
+            <h3 className="text-xl font-semibold mb-2 group-hover:text-pink-400 transition">
+              {repo.name}
+            </h3>
 
             <p className="text-gray-400 text-sm mb-4">
               {repo.description || "No description available."}

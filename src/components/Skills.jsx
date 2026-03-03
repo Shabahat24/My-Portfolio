@@ -1,13 +1,10 @@
 const skills = [
-  "React.js",
-  "JavaScript ES6+",
-  "Tailwind CSS",
-  "Redux",
-  "REST APIs",
-  "JWT Auth",
-  "WebSocket",
-  "Testing (Jest)",
-  "Git & GitHub",
+  "Frontend: React.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Redux, Context API",
+  "Backend: Node.js, Express.js, REST APIs, JWT, OAuth 2.0",
+  "Database: MongoDB, PostgreSQL, MySQL",
+  "UI & Styling: Tailwind CSS, Material-UI, Bootstrap",
+  "Testing: Jest, React Testing Library, Cypress",
+  "Tools: Git, GitHub, Webpack, Vite, Postman"
 ];
 
 export default function Skills() {
