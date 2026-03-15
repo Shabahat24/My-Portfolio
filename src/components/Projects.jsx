@@ -41,7 +41,8 @@ export default function Projects() {
     "Pariksha",
     "Tic-Tac-Toe",
     "Weather-App",
-    "Expense-Tracker"
+    "Expense-Tracker",
+    "Note-App"
   ];
 
   useEffect(() => {
