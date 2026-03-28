@@ -42,7 +42,8 @@ export default function Projects() {
     "Tic-Tac-Toe",
     "Weather-App",
     "Expense-Tracker",
-    "Note-App"
+    "Note-App",
+    "Mern-Shop"
   ];
 
   useEffect(() => {
