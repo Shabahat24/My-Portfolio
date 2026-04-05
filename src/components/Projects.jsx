@@ -43,7 +43,9 @@ export default function Projects() {
     "Weather-App",
     "Expense-Tracker",
     "Note-App",
-    "Mern-Shop"
+    "Mern_Shop",
+    "Golf-Charity",
+    "Road-trip-planner",
   ];
 
   useEffect(() => {
