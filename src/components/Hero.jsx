@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -8,16 +6,15 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex flex-col justify-center items-center text-center px-6"
     >
-    {/* Profile Image */}
-   <motion.img
-     src={`${import.meta.env.BASE_URL}profile.jpg`}
-     alt="Shabahat Riyaz"
-     initial={{ opacity: 0, scale: 0.8 }}
-     animate={{ opacity: 1, scale: 1 }}
-     transition={{ duration: 0.8 }}
-     className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover mb-6 border-4 border-white/20 shadow-xl"
-   />
-      {/* Animated name */}
+      <motion.img
+        src={`${import.meta.env.BASE_URL}profile.jpg`}
+        alt="Shabahat Riyaz"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover mb-6 border-4 border-white/20 shadow-xl"
+      />
+
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,31 +24,24 @@ export default function Hero() {
         Shabahat Riyaz
       </motion.h1>
 
-      {/* Subtitle */}
       <motion.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.2 }}
-        className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl"
+        className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed"
       >
-        Frontend Developer crafting modern, responsive & user-focused web
-        experiences using React, Tailwind & APIs.
+        MERN Stack Developer focused on building modern web applications with
+        React.js, Next.js, Node.js, and MongoDB. I specialize in responsive UI,
+        API integration, authentication, and performance-driven user
+        experiences.
       </motion.p>
 
-      {/* Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
         className="flex flex-col sm:flex-row gap-4"
       >
-        {/* <a
-          href="mailto:shabsriyaz@gmail.com"
-          className="px-8 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-red-500 hover:scale-105 transition transform font-semibold shadow-lg text-center"
-        >
-          Contact Me
-        </a> */}
-
         <a
           href="#projects"
           className="px-8 py-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 transition backdrop-blur text-center"
